@@ -1,0 +1,27 @@
+# Secretos y entornos
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Documentos y reportes (nunca subir documentos reales)
+ejemplos/
+tests/ejemplos_generados/
+logs/
+*.log
+verificacion_pedidos*.xlsx
+reporte de pedidos*.xlsx
+Operaciones de recolecci*.pdf
+*CONIN_PICK*.pdf
+MEDIDAS EQUIPOS*.xlsx
+ilovepdf*.pdf
+
+# Sistema
+.DS_Store
+Thumbs.db
