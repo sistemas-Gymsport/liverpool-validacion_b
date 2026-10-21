@@ -1,0 +1,21 @@
+[Unit]
+Description=Verificador de pedidos Liverpool - Gymsport (API Flask)
+After=network.target
+
+[Service]
+User=verificador
+Group=verificador
+WorkingDirectory=/opt/verificador/backend
+EnvironmentFile=/opt/verificador/backend/.env
+Environment=PORT=8000
+ExecStart=/opt/verificador/backend/.venv/bin/gunicorn app:app --bind 127.0.0.1:8000
+Restart=always
+RestartSec=5
+PrivateTmp=true
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/verificador/backend
+
+[Install]
+WantedBy=multi-user.target
